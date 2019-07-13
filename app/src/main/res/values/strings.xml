@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CounterApp</string>
+
+    <string name="textDefautNum">0</string>
+    <string name="textbtnText">Count</string>
+    <string name="textReset">Reset</string>
+</resources>
