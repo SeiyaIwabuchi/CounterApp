@@ -4,4 +4,6 @@
     <string name="textDefautNum">0</string>
     <string name="textbtnText">Count</string>
     <string name="textReset">Reset</string>
+    <string name="textSetting">Setting</string>
+    <string name="textNoContent">設定できる項目はありません。</string>
 </resources>

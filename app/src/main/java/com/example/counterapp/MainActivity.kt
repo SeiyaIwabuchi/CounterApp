@@ -1,5 +1,6 @@
 package com.example.counterapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -17,10 +18,9 @@ class MainActivity : AppCompatActivity() {
         var btnCount = findViewById<Button>(R.id.btnCount)
         var textCountNum = findViewById<TextView>(R.id.textCountNum)
         var btnReset = findViewById<Button>(R.id.btnReset)
+        var btnSetting = findViewById<Button>(R.id.btnSetting)
 
-        textCountNum.textSize = textSize * 2
-        btnCount.textSize = textSize
-        btnReset.textSize = textSize
+        var intent = Intent(this,SubActivity::class.java)
 
         //setContentView(R.layout.activity_main)
         //こいつを書くと画面更新ができなくなる
@@ -36,6 +36,10 @@ class MainActivity : AppCompatActivity() {
             Log.d("btnReset","Clicked")
             count = 0
             textCountNum.setText(count.toString())
+        }
+        btnSetting.setOnClickListener {
+            Log.d("btnSetting","Clicked")
+            startActivity(intent)
         }
 
     }
