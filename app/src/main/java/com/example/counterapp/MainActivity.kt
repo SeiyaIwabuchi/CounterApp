@@ -9,6 +9,10 @@ import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
 
+    companion object{
+        var countLimit : Long = 0
+        var countLoop : Boolean = false
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -29,7 +33,13 @@ class MainActivity : AppCompatActivity() {
 
         btnCount.setOnClickListener {
             Log.d("btnCount","Clicked")
+            Log.d("btnCount", countLimit.toString())
             count++
+            if (count > countLimit && countLoop && 0.toLong() != countLimit){
+                count = 0
+            }else if(count > countLimit && !countLoop && 0.toLong() != countLimit){
+                count = countLimit
+            }
             textCountNum.setText(count.toString())
         }
         btnReset.setOnClickListener {
@@ -41,6 +51,5 @@ class MainActivity : AppCompatActivity() {
             Log.d("btnSetting","Clicked")
             startActivity(intent)
         }
-
     }
 }

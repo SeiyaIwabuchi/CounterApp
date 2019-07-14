@@ -6,4 +6,6 @@
     <string name="textReset">Reset</string>
     <string name="textSetting">Setting</string>
     <string name="textNoContent">設定できる項目はありません。</string>
+    <string name="textTextCountLimit">カウント上限(０:無制限)</string>
+    <string name="textTextlLoopEnable">繰り返し</string>
 </resources>
